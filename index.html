@@ -3,309 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vibe知识大赏 - 美债·黄金·美元终极定价密码 (带同步文字解说版)</title>
+<title>Vibe知识大赏 - 全球流动性铁三角 (90s完整字幕版)</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background-color: #010203;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    color: #f8f9fa;
-    overflow: hidden;
-  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#010203;display:flex;justify-content:center;align-items:center;height:100vh;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#f8f9fa;overflow:hidden}
+  .stage{width:405px;height:720px;background:#05070c;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:48px 22px 22px;box-shadow:0 0 90px #000;cursor:none}
+  .aurora{position:absolute;width:320px;height:320px;border-radius:50%;filter:blur(70px);opacity:.26;z-index:0;animation:flt 12s ease-in-out infinite alternate}
+  .a1{top:-70px;right:-70px;background:radial-gradient(circle,#f5c84c,transparent 70%)}
+  .a2{bottom:-90px;left:-80px;background:radial-gradient(circle,#2563eb,transparent 70%);animation-delay:-5s}
+  @keyframes flt{0%{transform:translate(0,0)}100%{transform:translate(-30px,40px)}}
+  .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.03) 1px,transparent 1px);background-size:24px 24px;z-index:1}
+  .cn{position:absolute;width:14px;height:14px;border-color:rgba(245,200,76,.55);border-style:solid;z-index:12}
+  .tl{top:10px;left:10px;border-width:1.5px 0 0 1.5px}.tr{top:10px;right:10px;border-width:1.5px 1.5px 0 0}
+  .bl{bottom:10px;left:10px;border-width:0 0 1.5px 1.5px}.br{bottom:10px;right:10px;border-width:0 1.5px 1.5px 0}
+  canvas{position:absolute;inset:0;z-index:2;pointer-events:none}
+  .p-track{position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.06);z-index:15}
+  .p-bar{height:100%;width:0%;background:linear-gradient(90deg,#b8860b,#ffe885,#fff);box-shadow:0 0 12px rgba(255,224,102,.9)}
+  .hdr{position:absolute;top:18px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;z-index:15}
+  .pill{font-size:10.5px;font-weight:700;letter-spacing:1.2px;color:#f8dfa5;border:1px solid rgba(245,200,76,.35);padding:4px 10px;border-radius:99px;background:rgba(245,200,76,.08);display:flex;align-items:center;gap:6px}
+  .dot{width:6px;height:6px;background:#ffd659;border-radius:50%;animation:brk 1.3s infinite}
+  @keyframes brk{0%,100%{opacity:1}50%{opacity:.25}}
+  .clk{font-size:11px;color:#94a3b8;font-family:monospace;background:rgba(15,23,42,.75);border:1px solid rgba(255,255,255,.08);padding:3px 8px;border-radius:6px}
+  .main{position:relative;z-index:8;flex:1;display:flex;flex-direction:column;justify-content:center}
+  .sc{display:none;flex-direction:column;gap:11px}
+  .sc.on{display:flex}
+  .sc.on .s1{animation:up .5s cubic-bezier(.16,1,.3,1) .05s both}
+  .sc.on .s2{animation:up .5s cubic-bezier(.16,1,.3,1) .18s both}
+  .sc.on .s3{animation:up .5s cubic-bezier(.16,1,.3,1) .32s both}
+  .sc.on .s4{animation:up .5s cubic-bezier(.16,1,.3,1) .46s both}
+  @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .kicker{font-size:10.5px;font-weight:800;letter-spacing:1.8px;color:#d4af37}
+  h1{font-size:24px;line-height:1.28;font-weight:900;color:#fff}
+  h2{font-size:20px;line-height:1.3;font-weight:800;color:#fff}
+  p{font-size:13.5px;line-height:1.55;color:#94a3b8}
+  .g-txt{color:#ffd659}.b-txt{color:#60a5fa}.gr-txt{color:#34d399}.r-txt{color:#f87171}
+  .card{background:linear-gradient(160deg,rgba(30,41,59,.5),rgba(15,23,42,.7));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 14px;backdrop-filter:blur(10px)}
+  .tri{position:relative;height:215px;border-radius:14px;background:rgba(10,15,28,.8);border:1px solid rgba(245,200,76,.22)}
+  .flw{stroke-dasharray:8 6;animation:dsh 8s linear infinite}
+  @keyframes dsh{to{stroke-dashoffset:-168}}
+  .nd{position:absolute;padding:7px 10px;border-radius:8px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.6)}
+  .nd1{top:10px;left:50%;transform:translateX(-50%);background:rgba(30,58,138,.88);border:1px solid #60a5fa}
+  .nd2{bottom:12px;left:10px;background:rgba(6,78,59,.88);border:1px solid #34d399}
+  .nd3{bottom:12px;right:10px;background:rgba(113,63,18,.88);border:1px solid #fbbf24}
+  .nt{font-size:12.5px;font-weight:800;color:#fff}.ns{font-size:9.5px;color:#cbd5e1;margin-top:2px}
+  .hub{position:absolute;top:58%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(15,23,42,.92);border:1px solid rgba(245,200,76,.5);display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;font-weight:800;color:#fde68a}
+  .gh{display:flex;justify-content:space-between;font-size:12.5px;font-weight:700;margin-bottom:5px;color:#e2e8f0}
+  .gb{width:100%;height:9px;background:rgba(2,6,23,.85);border-radius:99px;overflow:hidden;margin-bottom:10px}
+  .gf{height:100%;width:0%;border-radius:99px;transition:width 1.3s ease-out}
+  .f-box{background:linear-gradient(135deg,rgba(245,200,76,.16),rgba(15,23,42,.88));border:1px solid rgba(245,200,76,.5);border-radius:11px;padding:11px;text-align:center}
+  .d-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .c-box{background:rgba(15,23,42,.75);border-radius:10px;padding:10px;border:1px solid rgba(255,255,255,.1)}
+  .c-tit{font-size:12.5px;font-weight:800;margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .s-row{font-size:11.5px;line-height:1.5;color:#cbd5e1;margin-bottom:4px}
+  .t-line{stroke-dasharray:420;stroke-dashoffset:420}
+  .sc.on .t-line{animation:drw 2s ease-out .35s forwards}
+  @keyframes drw{to{stroke-dashoffset:0}}
+  .r-box{display:flex;gap:10px;align-items:flex-start;background:rgba(245,200,76,.08);border:1px solid rgba(245,200,76,.3);border-radius:10px;padding:10px}
+  .b-num{min-width:20px;height:20px;background:#f5c84c;color:#090d16;font-weight:900;font-size:11px;border-radius:5px;display:flex;justify-content:center;align-items:center;margin-top:2px}
+  .sub-dock{position:relative;z-index:15;min-height:80px;background:rgba(8,12,24,.94);border:1px solid rgba(245,200,76,.4);border-radius:12px;padding:10px 13px;display:flex;flex-direction:column;justify-content:center}
+  .sub-tag{font-size:9.5px;font-weight:800;letter-spacing:1.2px;color:#f5c84c;margin-bottom:4px}
+  .sub-txt{font-size:13px;line-height:1.48;font-weight:600;color:#fff;transition:opacity .2s}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="p-track"><div class="p-bar" id="pBar"></div></div>
+  <div class="aurora a1"></div><div class="aurora a2"></div><div class="grid"></div>
+  <div class="cn tl"></div><div class="cn tr"></div><div class="cn bl"></div><div class="cn br"></div>
+  <canvas id="pts"></canvas>
 
-  .stage {
-    width: 405px;
-    height: 720px;
-    background: #05070c;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 50px 22px 24px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
-    cursor: none;
-  }
+  <div class="hdr">
+    <div class="pill"><span class="dot"></span>VIBE 知识大赏 · 宏观金融</div>
+    <div class="clk" id="clk">00:00 / 01:30</div>
+  </div>
 
-  .aurora {
-    position: absolute;
-    width: 340px; height: 340px;
-    border-radius: 50%;
-    filter: blur(75px);
-    opacity: 0.28;
-    z-index: 0;
-    animation: floatAurora 14s ease-in-out infinite alternate;
-  }
-  .aurora-gold { top: -80px; right: -80px; background: radial-gradient(circle, #f5c84c, transparent 70%); }
-  .aurora-blue { bottom: -100px; left: -90px; background: radial-gradient(circle, #2563eb, transparent 70%); animation-delay: -6s; }
-  @keyframes floatAurora {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-35px, 45px) scale(1.2); }
-  }
+  <div class="main">
+    <!-- 第1幕 -->
+    <div class="sc on" data-t="12000">
+      <div class="kicker s1">GLOBAL LIQUIDITY TRIANGLE</div>
+      <h1 class="s1">90秒拆穿全球金融<br><span class="g-txt">“终极流动性铁三角”</span></h1>
+      <p class="s2">为什么美债利率一破 5%，黄金就容易跳水？看懂万亿热钱的三大蓄水池：</p>
+      <div class="tri s3">
+        <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 355 215">
+          <polygon points="177,42 70,172 285,172" fill="rgba(245,200,76,.04)" stroke="rgba(245,200,76,.65)" stroke-width="1.6" class="flw"/>
+        </svg>
+        <div class="nd nd1"><div class="nt">💵 美元 (USD)</div><div class="ns">全球计价与结算霸权</div></div>
+        <div class="nd nd2"><div class="nt">📜 美债 (UST)</div><div class="ns">无风险生息锚点</div></div>
+        <div class="nd nd3"><div class="nt">🪙 黄金 (GOLD)</div><div class="ns">零息终极避险资产</div></div>
+        <div class="hub">资金<br>跷跷板</div>
+      </div>
+    </div>
 
-  .grid-overlay {
-    position: absolute;
-    inset: 0;
-    background-image: 
-      linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
-    background-size: 24px 24px;
-    z-index: 1;
-  }
-  .corner {
-    position: absolute;
-    width: 14px; height: 14px;
-    border-color: rgba(245, 200, 76, 0.55);
-    border-style: solid;
-    z-index: 12;
-  }
-  .c-tl { top: 10px; left: 10px; border-width: 1.5px 0 0 1.5px; }
-  .c-tr { top: 10px; right: 10px; border-width: 1.5px 1.5px 0 0; }
-  .c-bl { bottom: 10px; left: 10px; border-width: 0 0 1.5px 1.5px; }
-  .c-br { bottom: 10px; right: 10px; border-width: 0 1.5px 1.5px 0; }
+    <!-- 第2幕 -->
+    <div class="sc" data-t="15000">
+      <div class="kicker s1">CHAPTER 01 · USD & TREASURY</div>
+      <h2 class="s1"><span class="b-txt">美元</span> 与 <span class="gr-txt">美债</span>：绑定与反比</h2>
+      <p class="s2">全球买美债必须先换美元，两者天然绑定；但新手最常踩一个反常识大坑：</p>
+      <div class="card s3">
+        <div class="gh"><span>📈 资金抢购美债 → 债券交易价格</span><span class="gr-txt">上涨 ↑</span></div>
+        <div class="gb"><div class="gf" id="b1" style="background:#34d399"></div></div>
+        <div class="gh"><span>📉 票面利息固定 → 实际收益率</span><span class="r-txt">下跌 ↓</span></div>
+        <div class="gb" style="margin:0"><div class="gf" id="b2" style="background:#f87171"></div></div>
+      </div>
+      <div class="card s4"><div style="font-size:12.5px;color:#e2e8f0">💡 <b>极简算账：</b>100元借条每年固定付5元息；若被抢购涨到110元，新买家实际收益率就跌到了 <b class="g-txt">4.5%</b>。</div></div>
+    </div>
 
-  canvas#particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+    <!-- 第3幕 -->
+    <div class="sc" data-t="17000">
+      <div class="kicker s1">CHAPTER 02 · REAL YIELD</div>
+      <h2 class="s1">黄金的真正天敌：<span class="g-txt">实际利率</span></h2>
+      <p class="s2">华尔街机构给黄金定价，盯的不是表面利率，而是下面这个核心公式：</p>
+      <div class="f-box s3">
+        <div style="font-size:10px;color:#cbd5e1">WALL STREET GOLD PRICING FORMULA</div>
+        <div style="font-size:14.5px;font-weight:900;color:#fef08a;margin-top:3px">实际利率 = 美债名义收益率 − 通胀预期</div>
+      </div>
+      <div class="card s4" style="font-size:12.5px;color:#e2e8f0;line-height:1.6">
+        <div style="margin-bottom:6px"><b class="g-txt">① 机会成本博弈：</b>黄金放在金库<b>零利息</b>。美债实际利率飙升，机构就抛黄金去吃高息。</div>
+        <div><b class="b-txt">② 计价汇率压制：</b>黄金以美元标价，美元走强直接抬高非美买家的购金成本。</div>
+      </div>
+    </div>
 
-  .progress-track {
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 3px;
-    background: rgba(255,255,255,0.06);
-    z-index: 15;
-  }
-  .progress-bar {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #b8860b, #ffe885, #fff6cc);
-    box-shadow: 0 0 14px rgba(255, 224, 102, 0.9);
-  }
-
-  .header-bar {
-    position: absolute;
-    top: 18px; left: 22px; right: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 15;
-  }
-  .brand-pill {
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #f8dfa5;
-    border: 1px solid rgba(245, 200, 76, 0.35);
-    padding: 4px 11px;
-    border-radius: 99px;
-    background: linear-gradient(180deg, rgba(245,200,76,0.14), rgba(245,200,76,0.03));
-    backdrop-filter: blur(8px);
-    display: flex; align-items: center; gap: 6px;
-  }
-  .live-dot {
-    width: 6px; height: 6px;
-    background: #ffd659;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #ffd659;
-    animation: breathe 1.4s infinite;
-  }
-  @keyframes breathe {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(1.5); }
-  }
-  .timer-pill {
-    font-size: 11px;
-    color: #94a3b8;
-    font-family: "SF Mono", Consolas, monospace;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 3px 8px;
-    border-radius: 6px;
-  }
-
-  /* 主视觉区域 */
-  .main-content {
-    position: relative;
-    z-index: 8;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .scene {
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .scene.active { display: flex; }
-  .scene.active .s1 { animation: cinemaIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
-  .scene.active .s2 { animation: cinemaIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
-  .scene.active .s3 { animation: cinemaIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both; }
-  .scene.active .s4 { animation: cinemaIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.46s both; }
-
-  @keyframes cinemaIn {
-    from { opacity: 0; transform: translateY(18px) scale(0.97); filter: blur(4px); }
-    to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-  }
-
-  .chapter-kicker {
-    font-size: 10.5px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #d4af37;
-    text-transform: uppercase;
-  }
-  h1 {
-    font-size: 25px;
-    line-height: 1.28;
-    font-weight: 900;
-    letter-spacing: -0.3px;
-    background: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  h2 {
-    font-size: 20px;
-    line-height: 1.3;
-    font-weight: 800;
-    color: #ffffff;
-  }
-  p { font-size: 13.5px; line-height: 1.55; color: #94a3b8; }
-
-  .gold-text {
-    background: linear-gradient(135deg, #fff0a8 0%, #f5c84c 50%, #c59b27 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 12px rgba(245, 200, 76, 0.25));
-  }
-  .blue-hl { color: #60a5fa; }
-  .green-hl { color: #34d399; }
-  .red-hl { color: #f87171; }
-
-  .lux-card {
-    background: linear-gradient(160deg, rgba(30, 41, 59, 0.48) 0%, rgba(15, 23, 42, 0.65) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 13px;
-    padding: 13px 14px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-  }
-
-  /* 第1幕：精密SVG动态铁三角 */
-  .tri-stage {
-    position: relative;
-    height: 225px;
-    border-radius: 15px;
-    background: radial-gradient(circle at 50% 50%, rgba(245,200,76,0.06), rgba(10,15,28,0.8));
-    border: 1px solid rgba(245, 200, 76, 0.22);
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.7);
-  }
-  .flow-line {
-    stroke-dasharray: 8 6;
-    animation: flowDash 8s linear infinite;
-  }
-  @keyframes flowDash { to { stroke-dashoffset: -168; } }
-  .asset-node {
-    position: absolute;
-    padding: 8px 11px;
-    border-radius: 9px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.65);
-  }
-  .n-usd {
-    top: 12px; left: 50%; transform: translateX(-50%);
-    background: linear-gradient(180deg, rgba(30, 58, 138, 0.85), rgba(15, 23, 42, 0.95));
-    border: 1px solid rgba(96, 165, 250, 0.6);
-  }
-  .n-bond {
-    bottom: 14px; left: 12px;
-    background: linear-gradient(180deg, rgba(6, 78, 59, 0.85), rgba(15, 23, 42, 0.95));
-    border: 1px solid rgba(52, 211, 153, 0.6);
-  }
-  .n-gold {
-    bottom: 14px; right: 12px;
-    background: linear-gradient(180deg, rgba(113, 63, 18, 0.85), rgba(15, 23, 42, 0.95));
-    border: 1px solid rgba(251, 191, 36, 0.65);
-  }
-  .node-title { font-size: 13px; font-weight: 800; color: #fff; }
-  .node-sub { font-size: 9.5px; color: #cbd5e1; margin-top: 2px; }
-  .core-hub {
-    position: absolute;
-    top: 58%; left: 50%; transform: translate(-50%, -50%);
-    width: 62px; height: 62px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(245,200,76,0.22), rgba(15,23,42,0.9));
-    border: 1px solid rgba(245, 200, 76, 0.5);
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    font-size: 10px; font-weight: 800; color: #fde68a;
-    box-shadow: 0 0 25px rgba(245, 200, 76, 0.2);
-  }
-
-  /* 第2幕：双轨动态仪表条 */
-  .gauge-head { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 700; margin-bottom: 5px; color: #e2e8f0; }
-  .gauge-bg { width: 100%; height: 9px; background: rgba(2, 6, 23, 0.8); border-radius: 99px; overflow: hidden; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.06); }
-  .gauge-fill { height: 100%; width: 0%; border-radius: 99px; transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1); }
-
-  /* 第3幕：奢华公式铭牌 */
-  .formula-plaque {
-    background: linear-gradient(135deg, rgba(245, 200, 76, 0.16) 0%, rgba(15, 23, 42, 0.85) 100%);
-    border: 1px solid rgba(245, 200, 76, 0.5);
-    border-radius: 12px;
-    padding: 12px 10px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(245, 200, 76, 0.12);
-  }
-  .formula-main { font-size: 14.5px; font-weight: 900; color: #fef08a; letter-spacing: 0.4px; margin-top: 3px; }
-
-  /* 第4幕：加息降息对比矩阵 */
-  .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
-  .cycle-card {
-    background: rgba(15, 23, 42, 0.72);
-    border-radius: 11px;
-    padding: 11px 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-  .cycle-title { font-size: 13px; font-weight: 800; margin-bottom: 7px; padding-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .step-row { font-size: 11.5px; line-height: 1.5; color: #cbd5e1; margin-bottom: 5px; }
-
-  /* 第5幕：2026走势SVG折线 */
-  .chart-panel {
-    background: rgba(10, 15, 28, 0.8);
-    border: 1px solid rgba(245, 200, 76, 0.25);
-    border-radius: 12px;
-    padding: 11px;
-  }
-  .trend-line {
-    stroke-dasharray: 420;
-    stroke-dashoffset: 420;
-  }
-  .scene.active .trend-line {
-    animation: drawLine 2.2s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards;
-  }
-  @keyframes drawLine { to { stroke-dashoffset: 0; } }
-
-  /* 第6幕：黄金法则卡片 */
-  .rule-box {
-    display: flex; gap: 10px; align-items: flex-start;
-    background: linear-gradient(90deg, rgba(245,200,76,0.1), rgba(15,23,42,0.7));
-    border: 1px solid rgba(245, 200, 76, 0.32);
-    border-radius: 10px;
-    padding: 10px 11px;
-  }
-  .badge-num {
-    min-width: 20px; height: 20px;
-    background: linear-gradient(135deg, #fde68a, #d97706);
-    color: #090d16; font-weight: 900; font-size: 11px;
-    border-radius: 5px;
-    display: flex; justify-content: center; align-items: center;
-    margin-top: 2px;
-  }
-
-  /* 底部电影级同步文字解说字幕舱 */
-  .subtitle-dock {
-    position: relative;
-    z-index: 15;
+    <!-- 第4幕 -->
+    <div class="sc" data-t="17000">
+      <div class="kicker s1">CHAPTER 03 · FED POLICY</div>
+      <h2 class="s1">总阀门：美联储 <span class="r-txt">加息</span> vs <span class="gr-txt">降息</span></h2>
+      <p class="s2">美联储每一次调整联邦基金利率，都在直接重排全球资产的强弱格局：</p>
+      <div class="d-grid s3">
+        <div class="c-box" style="border-color:rgba(248,113,113,.45)">
+          <div class="c-tit r-txt">🔥 加息（抽水紧缩）</div>
+          <div class="s-row">1. 美元回流 → <b class="b-txt">美元涨 ↑</b></div>
+  document.addEventListener('keydown',e=>{if(e.code==='Space'){sec=0;clk.textContent='00:00 / 01:30';sub.textContent=subs[0][1];document.getElementById('b1').style.width='0%';document.getElementById('b2').style.width='0%';go(0)}});
+  go(0);
+</script>
+</body>
+</html>
